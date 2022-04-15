@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Score</title>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/result.css') }}">
+</head>
+<body>
+    <div class="about-section">
+        <div class="inner-container">
+            <h2 style="text-align: center;">Your Analysis</h2>
+            <h4 style="text-align: center;">There is hope, even when your brain tells you there isn't</h4>
+            <br>
+            <p class="text" style="font-family: sans-serif;font-size: 15px">
+              Score & Review = <textarea style="resize: none" name="message-1" class="form-control" placeholder="Review" rows="5">{{depscore}}</textarea>  <br>
+            </p>
+            <div>
+              <h3 style="text-align: center; font-family: sans-serif;">You're not Alone, hang in there!</h3>
+              <br>
+                <iframe width="420" height="375" src="static/css/videoplayback.mp4" title="We can help YOU!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <br>
+            <div>
+              <h3 style="text-align: center; font-family: sans-serif;">We Care!</h3>
+              <br>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfe0haxryfGoVp44ofuIRpDSkNnXdUOmMqzpDDFIBwn59dvxQ/viewform?embedded=true" width="420" height="737" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side navigation -->
+    <div class="sidenav">
+      <p style="text-align: center; color: black; padding-top: 20px; padding-left: 10px; padding-right: 10px; font-size: 30px"><b><i>We're here to Help!</i></b></p>
+      <br>
+      <a href="https://www.lifeline.org.nz/services/lifeline-helpline"><b>Lifeline</b></a>
+      <p style="font-size: 14px; color: black; padding-top: 5px; padding-left: 10px">Lifeline offers a free tele-helpline providing emotional support to people who are in despair, depressed or suicidal.</p>
+      <br>
+      <a href="https://www.rocf.org/voice-that-cares/"><b>Voice That Cares</b></a>
+      <p style="font-size: 14px; color: black; padding-top: 5px; padding-left: 10px"> A free public helpline that provides support on a wide range of mental health matters including anxiety, fear, pandemic induced psychological issues, stigma, etc.</p>
+      <br>
+      <a href="https://www.manntalks.org/"><b>Mann Talks</b></a>
+      <p style="font-size: 14px; color: black; padding-top: 5px; padding-left: 10px"> Mann Talks focuses on empowering individuals to take charge of their mental health. They guide individuals in making informed decisions about their mental health.</p>
+    </div>
+
+    <div class="sidenavr">
+      <p style="text-align: center; color: black; padding-top: 20px; padding-right: 10px; padding-left: 10px; font-size: 27px"><b><i>Take the Right Steps!</i></b></p>
+      <br>
+      <a href="https://www.helpguide.org/articles/depression/coping-with-depression.htm"><b>Reach Out & Stay Connected!</b></a>
+      <p style="font-size: 15px; color: black; padding-top: 5px; padding-left: 10px"> Look for support from people who make you feel safe and cared for.</p>
+      <br>
+      <a href="https://www.helpguide.org/articles/depression/coping-with-depression.htm"><b>Things that make you feel Good!</b></a>
+      <p style="font-size: 15px; color: black; padding-top: 5px; padding-left: 10px"> Aim for eight hours of sleep and practice relaxation techniques.</p>
+      <br>
+      <a href="https://www.helpguide.org/articles/depression/coping-with-depression.htm"><b>Get a daily dose of Sunlight!</b></a>
+      <p style="font-size: 15px; color: black; padding-top: 5px; padding-left: 10px"> Take a walk on your lunch break, have your coffee outside, enjoy an al fresco meal, or spend time gardening.</p>
+      <br>
+      <a href="https://www.helpguide.org/articles/depression/coping-with-depression.htm"><b>Get Professional Help!</b></a>
+      <p style="font-size: 15px; color: black; padding-top: 5px; padding-left: 10px"> If you’ve taken self-help steps and made positive lifestyle changes and still find your depression getting worse, seek professional help.</p>
+      <br>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="main">
+    ...
+  </div>
+</body>
+</html>

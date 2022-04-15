@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Depression Analysis</title>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+       <div>
+        <div class="jumbotron">
+
+          <h1 style="text-align:center">Depression Prediction & Analysis</h1>
+        </div>
+     <!-- Main Input For Receiving Query to our ML -->
+
+     <form class="form-group" action="{{ url_for('predict')}}"method="post">
+      <div class='center' style="text-align:left;">
+        <div style="text-align:left">
+          <label class="white"  for="">Gender</label>
+<!--    <input type="input" class="space form-control" step="0" name="GENDER" placeholder="GENDER" required="required" /><br> -->
+        <select class="space form-control" name="GENDER" placeholder="Gender">
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+        <br>
+        <br>
+    
+    <label class="white" for="">Age</label>
+    <input type="number" class="space form-control" step="0" name="AGE" placeholder="Age" required="required" />
+
+    <br>
+    <br>
+
+    <label class="white"  for="">Marital Status</label>
+    <!-- <input type="number" class="space form-control" step="0" name="MARRIED" placeholder="MARRIED" required="required" /><br> -->
+    <select class="space form-control" name="MARRIED" placeholder="Married">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </select>
+
+    <br>
+    <br>
+
+    <label class="white" for="">Education Level</label>
+    <input type="number" class="space form-control" step="0" name="EDUCATION LEVEL" placeholder="Education Level" required="required" />
+
+    <br>
+    <br>
+
+    <label class="white"  for="">Total Family Members</label>
+    <input type="number" class="space form-control" step="0" name="TOTAL FAMILY MEMBERS" placeholder="Total Family Members" required="required" />
+
+    <br>
+    <br>
+
+    <label class="white"  for="">Living Expenses</label>
+    <input type="number" class="space form-control" step="0" name="LIVING EXPENSES" placeholder="Living Expenses" required="required"/>
+
+    <br>
+    <br>
+
+    <label class="white"  for="">Total Income</label>
+    <input type="number" class="space form-control" step="0" name="INCOMING AGRICULTURE" placeholder="Total Income" required="required"/>
+
+    <br>
+    <br>
+
+    <div>
+      <button type="submit" class="submit-btn">Predict</button>  
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div>
+    <span><textarea class= "predict-btn" name="message-1" placeholder="Result" rows="5" style="width: 430px; height: 40px; text-align: center;"> {{ prediction_text }} </textarea> </span>
+    </div>
+
+    <style>
+      a:link, a:visited {
+        width: 75%;
+        padding: 10px 30px;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        color: black;
+        background: linear-gradient(to right, #ff105f, #ffad06);
+        text-decoration: none;
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+        font-family: sans-serif;
+        font-size: 15px;
+        text-align: center;
+      }
+
+      a:hover, a:active {
+        background-color: red;
+      }
+    </style>
+
+    <a href="\evaluate">Evaluate</a>
+
+  </div>
+  <br>
+   
+</div>
+
+</div>
+      </div>
+
+
+    </div>
+    <script>
+      var x= document.getElementById("LogIn");
+      var y= document.getElementById("Register");
+      var z= document.getElementById("btn");
+      function Register(){
+        x.style.left= "-300px";
+        y.style.left= "60px";
+        z.style.left= "120px";
+      }
+      function LogIn(){
+        x.style.left= "60px";
+        y.style.left= "490px";
+        z.style.left= "0px";
+      }
+
+
+    </script>
+  </body>
+</html>

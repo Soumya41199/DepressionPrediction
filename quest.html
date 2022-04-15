@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Depression Analysis</title>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/stylequest.css') }}">
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <h3>Psychometric Evaluation</h3>
+        <form class="form-group" action="{{ url_for('evaluate')}}"method="post">
+        <p id=form-prompt>1. Little interest or pleasure in doing things</p>
+        <input type="radio" id="ques1" name="q1" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques1" name="q1" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques1" name="q1" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques1" name="q1" value="o4">
+        <label for="D">Nearly every day</label><br>
+        <br>
+        <p id=form-prompt>2. Feeling down, depressed, or hopeless</p>
+        <input type="radio" id="ques2" name="q2" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques2" name="q2" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques2" name="q2" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques2" name="q2" value="o4">
+        <label for="D">Nearly every day</label><br>
+        <br>
+        <p id=form-prompt>3. Trouble falling or staying asleep, or sleeping too much</p>
+        <input type="radio" id="ques3" name="q3" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques3" name="q3" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques3" name="q3" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques3" name="q3" value="o4">
+        <label for="D">Nearly every day</label><br>
+        <br>
+        <p id=form-prompt>4. Poor appetite or overeating</p>
+        <input type="radio" id="ques4" name="q4" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques4" name="q4" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques4" name="q4" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques4" name="q4" value="o4">
+        <label for="D">Nearly every day</label><br>
+        <br>
+        
+        <p id=form-prompt>5. Feeling tired or having little energy </p>
+        <input type="radio" id="ques5" name="q5" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques5" name="q5" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques5" name="q5" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques5" name="q5" value="o4">
+        <label for="D">Nearly every day</label><br>
+        
+        <br>
+        <p id=form-prompt>6. Do you worry about things that have already happened in the past? </p>
+        <input type="radio" id="ques6" name="q6" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques6" name="q6" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques6" name="q6" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques6" name="q6" value="o4">
+        <label for="D">Nearly every day</label><br>
+
+        <br>
+        <p id=form-prompt>7. Moving or speaking so slowly that other people could have noticed </p>
+        <input type="radio" id="ques7" name="q7" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques7" name="q7" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques7" name="q7" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques7" name="q7" value="o4">
+        <label for="D">Nearly every day</label><br>
+        
+        <br>
+        <p id=form-prompt>8. Thoughts that you would be better off dead, or of hurting yourself </p>
+        <input type="radio" id="ques8" name="q8" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques8" name="q8" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques8" name="q8" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques8" name="q8" value="o4">
+        <label for="D">Nearly every day</label><br>
+
+        <br>
+
+        <p id=form-prompt>9. Feeling bad about yourself - or that you are a failure or have let yourself or your family down </p>
+        <input type="radio" id="ques9" name="q9" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques9" name="q9" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques9" name="q9" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques9" name="q9" value="o4">
+        <label for="D">Nearly every day</label><br>
+
+        <br>
+
+        <p id=form-prompt>10. How often have you been bothered by not being able to stop or control worrying?</p>
+        <input type="radio" id="ques10" name="q10" value="o1">
+        <label for="ND">Not at all</label><br>
+        <input type="radio" id="ques10" name="q10" value="o2">
+        <label for="MD">Several days</label><br>
+        <input type="radio" id="ques10" name="q10" value="o3">
+        <label for="MoD">More than half of the days</label><br>
+        <input type="radio" id="ques10" name="q10" value="o4">
+        <label for="D">Nearly every day</label><br>
+
+        <br>
+        <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+    <script>
+      var x= document.getElementById("LogIn");
+      var y= document.getElementById("Register");
+      var z= document.getElementById("btn");
+      function Register(){
+        x.style.left= "-300px";
+        y.style.left= "60px";
+        z.style.left= "120px";
+      }
+      function LogIn(){
+        x.style.left= "60px";
+        y.style.left= "490px";
+        z.style.left= "0px";
+      }
+
+
+    </script>
+  
+</html>
